@@ -5,7 +5,7 @@ class game{
     
     bool blue_ghost_state;
 
-    short playerOrentation = up;
+    short playerOrentation = down;
     bool playerState;
 
     int playerlastX;

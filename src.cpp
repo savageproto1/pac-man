@@ -44,6 +44,7 @@ void printBoard(){
         }
         std::cout<<"\n";
     }
+     
 }
 
 
@@ -68,7 +69,8 @@ void start(){
 
 void inputkey(){
     char c;
-resetint:
+while(true){
+    
     std::cin>>c;
 
     switch (c){
@@ -87,8 +89,9 @@ resetint:
          default:   
             break;
         };
-    std::this_thread::sleep_for(100ms);
-    goto resetint;
+        
+}
+    
 }
 
 void nextFrame(){
@@ -106,13 +109,14 @@ int main(){
     start();
 
 std::thread input (inputkey);
-
-    while(true){
+    int i;
+    while(i < 100){
        
     nextFrame();
     
 
     delay();
+    i++;
     }
 
 
